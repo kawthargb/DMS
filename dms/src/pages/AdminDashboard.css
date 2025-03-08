@@ -1,0 +1,52 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #f6a83b;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between elements */
+    position: relative;
+}
+
+/* Navbar title */
+.dashboard-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: absolute;
+    left: 20px; /* Keep title on the left */
+}
+
+/* Search & Filter Container */
+.search-filter-container {
+    flex-grow: 1; /* Allows the container to take available space */
+    display: flex;
+    justify-content: center; /* Centers the SearchBar */
+}
+
+/* Filter Button */
+.filter-button {
+    margin-left: auto; /* Pushes FilterButton to the right */
+}
+
+/* Container for the Actions button inside navbar */
+.navbar .actions-button-container {
+    display: inline-block;
+    margin-left: 15px; /* Space between filter button and actions button */
+}
+.search-input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 300px;
+  }
+  

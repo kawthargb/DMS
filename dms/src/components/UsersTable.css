@@ -1,0 +1,219 @@
+.users-table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+  position: relative; /* Added to serve as a positioning context for the actions button */
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.users-table th, .users-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.users-table input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* Dropdown Icon */
+.dots-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Dropdown Menu */
+.dropdown-header {
+  position: relative;
+  width: 40px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdown-menu label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Users Table Header */
+.users-table-header {
+  display: flex;
+  justify-content: space-between; /* Moves the button to the right */
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Ensures the button aligns properly */
+.create-user-btn {
+  margin-left: auto; /* Pushes it to the right */
+}
+
+/* Container for the Actions button above the table */
+.users-table-container .actions-button-container {
+  position: absolute;
+  top: -40px; /* Moves it above the table container */
+  right: 0; /* Aligns it to the right */
+  display: inline-block;
+}
+
+/* Edit and Delete Icons */
+.edit-icon, .delete-icon {
+  font-size: 22px; /* Increase icon size */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  margin: 0 8px; /* Adds spacing between icons */
+}
+
+/* Edit Icon */
+.edit-icon {
+  color: #1e3a8a; /* Green */
+}
+
+.edit-icon:hover {
+  color: #1e3a8a;
+}
+
+/* Delete Icon */
+.delete-icon {
+  color: #000000; /* Red */
+}
+
+.delete-icon:hover {
+  color: #000000;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-modal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel-btn, .save-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.save-btn {
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #e1e1e1;
+}
+
+.save-btn:hover {
+  background-color: #2980b9;
+}

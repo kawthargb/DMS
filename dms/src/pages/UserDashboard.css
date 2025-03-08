@@ -1,0 +1,33 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #1e3a8a; /* Deep Blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Navbar Title */
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-links a:hover {
+    color: #f3f4f6; /* Light gray on hover */
+  }
+  

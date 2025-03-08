@@ -1,0 +1,58 @@
+.user-actions-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #666;
+    transition: color 0.2s;
+  }
+  
+  .action-button:hover {
+    color: #333;
+  }
+  
+  .actions-dropdown {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .dropdown-item svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .delete-action {
+    color: #e53e3e;
+  }
+  
+  .delete-action:hover {
+    background-color: #fee2e2;
+  }

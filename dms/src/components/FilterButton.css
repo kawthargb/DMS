@@ -1,0 +1,69 @@
+/* Filter Button Container */
+.filter-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative; /* Required for the custom arrow positioning */
+}
+
+/* Styled Dropdown Select */
+.filter-select {
+  padding: 10px 30px 10px 15px; /* Extra padding on the right for the arrow */
+  border: 2px solid #e2e8f0; /* Softer gray border */
+  border-radius: 12px; /* Softer, rounder corners */
+  font-size: 16px;
+  font-weight: 500; /* Slightly bolder text */
+  color: #1e3a8a; /* Match navbar color for text */
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); /* Subtle gradient */
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+  outline: none;
+  appearance: none; /* Remove default dropdown arrow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  position: relative;
+}
+
+/* Hover Effect */
+.filter-select:hover {
+  border-color: #2563eb; /* Bright blue on hover */
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Lighter gradient */
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2); /* Slightly larger shadow */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Focus Effect */
+.filter-select:focus {
+  border-color: #1e40af; /* Darker blue for focus */
+  background: #ffffff; /* Clean white on focus */
+  box-shadow: 0 0 12px rgba(30, 64, 175, 0.3), 0 0 0 4px rgba(37, 99, 235, 0.2); /* Glow + outline */
+}
+
+/* Custom Arrow Icon */
+.filter-button-container::after {
+  content: "▼"; /* Down arrow */
+  font-size: 12px;
+  color: #4b5e7a; /* Softer grayish-blue */
+  position: absolute;
+  right: 12px; /* Position inside the dropdown */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrow */
+  pointer-events: none; /* Prevent interference with clicking */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Arrow Color Change on Hover */
+.filter-button-container:hover::after {
+  color: #2563eb; /* Match hover border color */
+}
+
+/* Remove default arrow in some browsers */
+.filter-select::-ms-expand {
+  display: none;
+}
+
+/* Optional: Active/Pressed State */
+.filter-select:active {
+  transform: translateY(1px); /* Slight press-down effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
